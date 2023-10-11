@@ -5,7 +5,7 @@ When I open the website page am greated,
 Give instructions on how the quiz works,
 Add a button that starts the quiz.
 
-## Feature/StartHide
+## Feature/StartHide:
 For this branch I want to add an event listener to the start button so that
 - When I press the start button
 - The landing page disappears
@@ -22,3 +22,6 @@ For this branch I want to reference the questions array on the html and do the f
 
 ## Feature/StartHide:
 ![Alt text](/asset/doc/StartHide.png)
+
+## Feature/Questionv2:
+![Alt text](/asset/doc/Questionsv2.png)
