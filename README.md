@@ -4,10 +4,7 @@ For this branch I want to work on the starting page that has the following funct
 When I open the website page am greated,
 Give instructions on how the quiz works,
 Add a button that starts the quiz.
-## Feature/Css
-For this branch, I want to add styling to the home page:
-It will display only the 
+
 
 # Screenshots:
 ## Feature/start:
-![Alt text](/doc/FeatureStart.png)
