@@ -36,3 +36,12 @@ body {
     background-color: rgba(138, 43, 226, 0.7);
     cursor: pointer;
 }
+#question-Page {
+
+}
+.hide {
+    display: none;
+}
+#question {
+    font-size: 150%;
+}

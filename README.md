@@ -10,6 +10,11 @@ For this branch I want to add an event listener to the start button so that
 - When I press the start button
 - The landing page disappears
 
+## Feature/Questionsv2:
+For this branch I want to reference the questions array on the html and do the following:
+- When I press the start button,
+- Display the first element of the array
+
 
 # Screenshots:
 ## Feature/start:
