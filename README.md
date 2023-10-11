@@ -13,3 +13,7 @@ For this branch I want to add an event listener to the start button so that
 
 # Screenshots:
 ## Feature/start:
+![Alt text](/asset/doc/FeatureStart.png)
+
+## Feature/StartHide:
+![Alt text](/asset/doc/StartHide.png)
