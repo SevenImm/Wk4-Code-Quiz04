@@ -25,10 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // display the question title
         questionTitle.textContent = startQuiz.title;
+        console.log(questionTitle);
 
         // clear the previous options
         questionOptions.innerHTML = '';
-        
+
 
     }
 });
