@@ -25,7 +25,14 @@ limit. Keep in mind the incorrect answers will penalize your score/time
             </pre>
         </p>
         <button class="start-Quiz">Start Quiz!</button>
-    </div>
+        </div>
+        <!-- closing div on the correct section, previously this was causing everything to disappear -->
+        <div id="question-Page" class="hide">
+            <h2 id="question"></h2>
+            <div id="options"></div>
+        </div>
+    <!-- Reference the questions script -->
+    <script src="/asset/questions.js" defer></script>
     <script src="/asset/script.js" defer></script>
 </body>
 </html>
