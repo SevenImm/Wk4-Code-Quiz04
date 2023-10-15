@@ -36,9 +36,6 @@ body {
     background-color: rgba(138, 43, 226, 0.7);
     cursor: pointer;
 }
-#question-Page {
-
-}
 .hide {
     display: none;
 }
@@ -70,4 +67,12 @@ body {
 }
 #wrong-answer-highlight{
     background-color: red;
+}
+#submit {
+    background-color: blueviolet;
+    color: white;
+    margin: 1%;
+    padding: 3%;
+    border: none;
+
 }

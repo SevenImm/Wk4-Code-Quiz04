@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let landingPage = document.querySelector('.landing-Page');
     // Target the question div and remove the class attribute
     let questionPage = document.getElementById('question-Page');
+    // Target the result page 
+    let resultPage = document.getElementById('result-page');
+    // Target submition form
+    let submitBtn = document.getElementById('submit');
 
     startButton.addEventListener('click', function () {
         landingPage.style.display = 'none'
@@ -72,10 +76,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 displayQuestion();
             } else {
                 console.log('Quiz done');
-                
+                questionPage.setAttribute('class','hide');
+                resultPage.removeAttribute('class','hide');
             }
         },375); //delay time
             })
         });
     }
+    // Submit result page
+
 });
