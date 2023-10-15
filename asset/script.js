@@ -10,12 +10,31 @@ document.addEventListener("DOMContentLoaded", function () {
     // Target submition form
     let submitBtn = document.getElementById('submit');
 
+    // Time components
+    var timeEl = document.getElementById('time');
+    var timeStart = 100;
+    var timeID;
+
+
     startButton.addEventListener('click', function () {
-        landingPage.style.display = 'none'
+        landingPage.setAttribute('class', 'hide')
         console.log('clicked button. Landing page hidden.');
         questionPage.removeAttribute('class');
+        // time run
+        timeID = setInterval(clockTick, 1000);
+        timeEl.textContent = timeStart;
+
         displayQuestion();
+
     });
+    function clockTick() {
+        // update time
+        timeStart--;
+        timeEl.textContent = timeStart;
+        if (timeStart <= 0){
+            showRESULTPAGE();
+        }
+    };
     // Start the object index always at 0
     let startQuizIndex = 0;
     // Start display question function:
@@ -59,30 +78,37 @@ document.addEventListener("DOMContentLoaded", function () {
                     button.setAttribute('id', 'correct-answer-highlight');
                 } else {
                     button.setAttribute('id', 'wrong-answer-highlight');
+                    timeStart -= 10;                    
                 }
                 // 🔥HOTFIX🔥 Prevent the user from selecting other options 
-                quizButtons.forEach(function(btn) {
+                quizButtons.forEach(function (btn) {
                     btn.disabled = true;
                 });
-        // set delay time for moving to the next question
-        setTimeout(function() {
-            // remove the highlighted id to the choices
-            button.removeAttribute('correct-answer-highlight', 'wrong-answer-highligth');
-            // move to the next question index
-            startQuizIndex++;
-            // check if there are more questions,if not, move to the result page
-            if (startQuizIndex < questions.length) {
-                // display the next question
-                displayQuestion();
-            } else {
-                console.log('Quiz done');
-                questionPage.setAttribute('class','hide');
-                resultPage.removeAttribute('class','hide');
-            }
-        },375); //delay time
+                // set delay time for moving to the next question
+                setTimeout(function () {
+                    // remove the highlighted id to the choices
+                    button.removeAttribute('id');
+                    // move to the next question index
+                    startQuizIndex++;
+                    // check if there are more questions,if not, move to the result page
+                    if (startQuizIndex < questions.length) {
+                        // display the next question
+                        displayQuestion();
+                    } else {
+                        console.log('Quiz done');
+                        questionPage.setAttribute('class', 'hide');
+                        resultPage.removeAttribute('class', 'hide');
+                    }
+                }, 375); //delay time
             })
         });
     }
     // Submit result page
+function showRESULTPAGE() {
+    console.log('Quiz Done: TIME OUT');
+    clearInterval(timeID);
+    questionPage.setAttribute('class', 'hide');
+    resultPage.removeAttribute('class','hide');
+};
 
 });

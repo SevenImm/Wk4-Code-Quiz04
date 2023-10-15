@@ -25,6 +25,12 @@ For this branch I want to show the result page when no more questions are left.
 - Show me the result page,
 - Allow me to submit a form.
 **While the form is in place, form submition is not possible at the moment, there is no score to store yet. This will be addressed once the time/score feature is implemented**
+## Feature/Time:
+For this branch I want to show a timer and add time subtraction when the user gets a wrong answer:
+- When the quiz starts: time starts,
+- if an answer is wrong: subtract 10 seconds,
+- if time runs out before the quiz is over: move the user to the result page.
+
 
 # HOTFIX🔥🔥🔥
 ## Feature/Options:
@@ -44,3 +50,6 @@ During the development of this branch, I noticed the user could still select oth
 
 ## Feature/Result:
 ![Alt text](/asset/doc/Result.png)
+
+## Feature/Time: 
+![Alt text](/asset/doc/Time.png)

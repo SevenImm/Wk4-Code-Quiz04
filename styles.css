@@ -76,3 +76,15 @@ body {
     border: none;
 
 }
+.timer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 1vh;
+    right: 1vh;
+}
+.timer img {
+    margin-right: 1vh;
+    height: 20px;
+    width: 20px;
+}
