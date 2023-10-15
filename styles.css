@@ -45,3 +45,29 @@ body {
 #question {
     font-size: 150%;
 }
+/* button styling */
+.quizButton {
+    display: flex;
+    color: white;
+    background-color: blueviolet;
+    margin: 1%;
+    border-radius: 4px;
+    /* animation transition */
+    transition: 300ms;
+}
+.quizButton:hover {
+    cursor: pointer;
+    padding: 1.5%;
+    transition: 300ms;
+    font-size: large;
+    font-weight: bolder;
+}
+.quizButton:active {
+    background-color: rgba(138, 43, 226, 0.7);
+}
+#correct-answer-highlight {
+    background-color: green;
+}
+#wrong-answer-highlight{
+    background-color: red;
+}
