@@ -36,7 +36,9 @@ For this branch I want to store the user score and initials into local storage f
 - User string & score get stored in local storage.
 + Added the html structure,
 + Added & correctly attribute the list element to the object array.
-
+## Feature/Style:
++ Added clear scores button functionality
++ Added list styling
 
 # HOTFIX🔥🔥🔥
 ## Feature/Options:
@@ -62,3 +64,6 @@ During the development of this branch, I noticed the user could still select oth
 
 ## Feature/Highscores:
 ![Alt text](/asset/doc/Highscores.png)
+
+## Feature/Style:
+![Alt text](/asset/doc/Style.png)
