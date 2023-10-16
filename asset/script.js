@@ -109,6 +109,9 @@ function showRESULTPAGE() {
     clearInterval(timeID);
     questionPage.setAttribute('class', 'hide');
     resultPage.removeAttribute('class','hide');
+    // update the final score element with the final time
+    const finalScoreElement = document.getElementById('final-score');
+    finalScoreElement.textContent = timeStart + " seconds";
 };
 function submitScore() {
     const initials = userInitials.value.trim();
