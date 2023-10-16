@@ -34,6 +34,8 @@ For this branch I want to show a timer and add time subtraction when the user ge
 For this branch I want to store the user score and initials into local storage for future use:
 - When the user submits the form,
 - User string & score get stored in local storage.
++ Added the html structure,
++ Added & correctly attribute the list element to the object array.
 
 
 # HOTFIX🔥🔥🔥
