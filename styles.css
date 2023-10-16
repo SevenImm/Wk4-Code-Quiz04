@@ -1,6 +1,15 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
+ul li {
+    list-style-type: none;
+    border-bottom: 2px solid blueviolet;
+    cursor: pointer;
+}
+ul li:hover{
+    color: red;
+    user-select: all;
+}
 /* header {
     position: absolute;
 } */
@@ -102,3 +111,4 @@ body {
 .clearHS:active {
     background-color: rgba(138, 43, 226, 0.7);
 }
+

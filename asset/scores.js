@@ -12,4 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(listItem);
         highScorelist.appendChild(listItem);
     });
-})
+    // Add event listener to the clear list button
+    const clearScoreButton = document.querySelector('.clearHS');
+    clearScoreButton.addEventListener('click', function() {
+        localStorage.removeItem('highScores');
+        highScorelist.innerHTML = '';
+    });
+});
