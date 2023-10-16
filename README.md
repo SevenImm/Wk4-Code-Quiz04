@@ -30,6 +30,10 @@ For this branch I want to show a timer and add time subtraction when the user ge
 - When the quiz starts: time starts,
 - if an answer is wrong: subtract 10 seconds,
 - if time runs out before the quiz is over: move the user to the result page.
+## Feature/Highscore:
+For this branch I want to store the user score and initials into local storage for future use:
+- When the user submits the form,
+- User string & score get stored in local storage.
 
 
 # HOTFIX🔥🔥🔥
@@ -53,3 +57,6 @@ During the development of this branch, I noticed the user could still select oth
 
 ## Feature/Time: 
 ![Alt text](/asset/doc/Time.png)
+
+## Feature/Highscores:
+![Alt text](/asset/doc/Highscores.png)
