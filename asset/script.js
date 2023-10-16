@@ -7,13 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
     let questionPage = document.getElementById('question-Page');
     // Target the result page 
     let resultPage = document.getElementById('result-page');
-    // Target submition form
+    // Target submition form - user initials
     let submitBtn = document.getElementById('submit');
 
     // Time components
     var timeEl = document.getElementById('time');
     var timeStart = 100;
     var timeID;
+    // HighScore elements
+    var userInitials = document.getElementById('initials');
 
 
     startButton.addEventListener('click', function () {
@@ -95,9 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         // display the next question
                         displayQuestion();
                     } else {
-                        console.log('Quiz done');
-                        questionPage.setAttribute('class', 'hide');
-                        resultPage.removeAttribute('class', 'hide');
+                        showRESULTPAGE();
                     }
                 }, 375); //delay time
             })
@@ -110,5 +110,32 @@ function showRESULTPAGE() {
     questionPage.setAttribute('class', 'hide');
     resultPage.removeAttribute('class','hide');
 };
+function submitScore() {
+    const initials = userInitials.value.trim();
+    if (initials === '') {
+        alert("Initials cannot be empty");
+        return;
+    };
+    // make a score json object with initials and time(score)
+    const scoreObject = {
+        initials: initials,
+        score: timeStart
+    };
+    const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+    // add the new score to the array
+    highScores.push(scoreObject);
+    // sort the array by score in descending order
+    highScores.sort((a,b) => b.score - a.score);
+
+    localStorage.setItem('highScores', JSON.stringify(highScores));
+
+    // redirect the user to the highscores page
+    window.location.href ="highscores.html";
+};
+
+// Event listener for the submit button
+submitBtn.addEventListener('click', function() {
+    submitScore();
+})
 
 });
